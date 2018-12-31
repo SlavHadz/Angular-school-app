@@ -20,12 +20,14 @@
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link btn facebook btn-block"><i class="fab fa-facebook-f"></i> Login as student</a>
+      <li class="nav-item" *ngIf="afAuth.authState | async as user; else loginButton">
+        <a class="nav-link btn btn-danger btn-block" (click)="logout()">Logout</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link btn btn-danger btn-block">Logout</a>
-      </li>
+      <ng-template #loginButton>
+        <li class="nav-item">
+          <a class="nav-link btn facebook btn-block" (click)="authService.loginWithFacebook()" ><i class="fab fa-facebook-f"></i> Login as student</a>
+        </li>
+      </ng-template>
     </ul>
   </div>
 </nav>
