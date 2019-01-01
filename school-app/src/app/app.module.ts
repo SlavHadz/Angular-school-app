@@ -10,11 +10,13 @@ import { AppFirebaseModule } from './app-firebase/app-firebase.module';
 import { AuthService } from './auth/auth.service';
 import { RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/guard/auth.guard';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-diary',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiaryComponent implements OnInit {
 
-  constructor() { }
+  students: any[];
+
+  constructor(private db: AngularFireDatabase) { }
 
   ngOnInit() {
+    this.db.list('/students').valueChanges()
+      .subscribe((students) => {
+        this.students = students;
+      });
   }
 
 }

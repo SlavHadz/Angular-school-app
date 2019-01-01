@@ -9,3 +9,8 @@ a.navbar-brand {
 a.navbar-brand:hover {
     color: white;
 }
+
+li.greeting {
+    margin-top: 10px;
+    color: rgb(150, 150, 150);
+}
