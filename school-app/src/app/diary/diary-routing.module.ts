@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GalleryComponent } from './gallery/gallery.component';
+import { DiaryComponent } from './diary.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'gallery', pathMatch: 'full'},
-  {path: 'gallery', component: GalleryComponent}
+  {path: '', redirectTo: 'diary', pathMatch: 'full'},
+  {path: 'diary', component: DiaryComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class GalleryRoutingModule { }
+export class DiaryRoutingModule { }
