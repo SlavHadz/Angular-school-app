@@ -21,8 +21,23 @@ export class AuthService {
           });
   }
 
+  signUp(email, password) {
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+          .then((userCredentials) => {
+            console.log(userCredentials);
+          });
+  }
+
+  signIn(email, password) {
+    this.afAuth.auth.signInWithEmailAndPassword(email, password)
+          .then((userCredentials) => {
+            console.log(userCredentials);
+          });
+  }
+
   logout() {
     this.afAuth.auth.signOut();
+    this.userName = '';
   }
 
   loggedIn () {
