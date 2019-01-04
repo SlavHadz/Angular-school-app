@@ -1,3 +1,10 @@
-<p>
-  gallery works!
-</p>
+<div class="row">
+    <h2 class="col-12 text-center">Photos of our school life</h2>
+    <ul id="thumbnailsList">
+        <li *ngFor="let image of images" class="img">
+            <a [routerLink]="['/image']">
+                <img src="{{image.url}}" class="tn">
+            </a>
+        </li>
+    </ul>
+</div>
