@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   password: string;
   signInMode = false;
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -20,10 +21,15 @@ export class LoginComponent implements OnInit {
   signUpOrSignIn() {
     this.signInMode ? this.authService.signIn(this.email, this.password) :
                       this.authService.signUp(this.email, this.password);
+    this.router.navigate(['home']);
   }
 
-  toggleSignInMode() {
-    this.signInMode = !this.signInMode;
+  signIn() {
+    this.signInMode = true;
+  }
+
+  signUp() {
+    this.signInMode = false;
   }
 
 }

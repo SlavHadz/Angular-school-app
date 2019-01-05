@@ -5,3 +5,13 @@ div button.facebook {
     width: 20%;
     color: black;
 }
+
+form button.signButton {
+    margin: auto;
+    margin-bottom: 30px;
+    width: 30%;
+}
+
+div.signForm {
+    border-bottom: 2px solid rgba(50, 50, 50, 0.6);
+}
