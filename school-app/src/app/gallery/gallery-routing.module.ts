@@ -6,6 +6,7 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
 const routes: Routes = [
   {path: '', redirectTo: 'gallery', pathMatch: 'full'},
   {path: 'gallery', component: GalleryComponent},
+  {path: 'gallery/:id', component: ImageDetailComponent}
 ];
 
 @NgModule({

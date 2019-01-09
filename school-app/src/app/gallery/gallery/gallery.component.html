@@ -2,7 +2,7 @@
     <h2 class="col-12 text-center">Photos of our school life</h2>
     <ul id="thumbnailsList">
         <li *ngFor="let image of images" class="img">
-            <a [routerLink]="['/image']">
+            <a [routerLink]="[ '/gallery/gallery', image.id]">
                 <img src="{{image.url}}" class="tn">
             </a>
         </li>

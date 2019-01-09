@@ -1,0 +1,6 @@
+.selectedImage {
+    margin: auto;
+    width: 80%;
+    border: 4px solid #eee;
+    box-shadow: 2px 2px 3px rgb(50, 50, 50)
+}
